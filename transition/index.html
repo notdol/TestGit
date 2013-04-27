@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title>transition</title>
+	<style type="text/css">
+		.section{
+			position : absolute;
+			border-style : solid;
+			border-width: 1px;
+			background-color: grey;
+			left: 50%;
+			margin-left: -400px;
+			width: 800px;
+			height: 600px;
+
+		}
+	</style>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="transition.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				var $list = $('.section');
+				var next = $($list[1]).hide();
+				var prev = $($list[0]);
+
+				hide(prev);
+				show(next);
+
+				return ;
+				$("#div1").transition({ 
+					perspective: '100px',
+					rotateX: '90deg'
+				});
+			});
+
+			function hide(t){
+				console.log('hide: '+t);
+				t.transition({
+					x: -200,
+					opacity: 0
+				})
+			};
+
+			function show(t){
+				t.show();
+				console.log('show: '+t);
+				t.css('x',200);
+				t.css('opacity',0);
+				t.transition({
+					x: 0,
+					opacity : 1
+				});
+			};
+
+
+		</script>
+</head>
+<body>
+<div class="section" id="div1">
+111
+</div>
+<div class="section" id="div2" style="opacity: 0">
+sdkljfsdlf
+</div>
+</body>
+</html>

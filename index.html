@@ -1,0 +1,98 @@
+<html>
+<head>
+        <title>title</title>
+        <style type="text/css">
+        section, .section{
+                position: absolute;
+                border-style: solid;
+                border-width: 1px;
+                background-color: grey;
+                width: 800px;
+                height: 600px;
+                left: 50%;
+                margin-left: -400px;
+        }
+        </style>
+
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="transition/transition.js"></script>
+
+        <script type="text/javascript" src="js/ppt.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="transition/transition.js"></script>
+</head>
+<body>
+        <section>
+                <script type="text/javascript">
+                        PPT.animate(function(){
+                                console.log(this.$('div'));
+                        });
+                </script>
+                <div id="div1">1</div>
+        </section>
+        <section>
+                <script type="text/javascript">
+                        PPT.animate(function(){
+                                this.$(this.$('ul')).show('fade');
+                                this.$(this.$('li')[0]).trans({x:'100px'});
+                                this.$(this.$('li')[1]).trans({x:'100px'});
+                                this.$(this.$('li')[2]).trans({x:'100px'});
+                                this.$(this.$('ul')).hide('zoom');
+                        });
+                </script>
+                <ul>
+                        <li>this is first</li>
+                        <li>this is second</li>
+                        <li>this is thrid</li>
+                </ul>
+        </section>
+        <section>
+                <script type="text/javascript">
+                        PPT.animate(function(){
+                                console.log(this.$('div'));
+                        });
+                </script>
+                <div id="div3">3</div>
+        </section>
+        <section>
+                <script type="text/javascript">
+                        PPT.animate(function(){
+                                console.log(this.$('div'));
+                        });
+                </script>
+                <div id="div4">4</div>
+        </section>
+        <section>
+                <script type="text/javascript">
+                        PPT.animate(function(){
+                                console.log(this.$('div'));
+                        });
+                </script>
+                <div id="div5">5</div>
+        </section>
+        <section>
+                <script type="text/javascript">
+                        PPT.animate(function(){
+                                console.log(this.$('div'));
+                        });
+                </script>
+                <div id="div6">6</div>
+        </section>
+        <section>
+                <script type="text/javascript">
+                        PPT.animate(function(){
+                                console.log(this.$('div'));
+                        });
+                </script>
+                <div id="div7">7</div>
+        </section>
+        <section>
+                <script type="text/javascript">
+                        PPT.animate(function(){
+                                console.log(this.$('div'));
+                        });
+                </script>
+                <div id="div8">8</div>
+        </section>
+</body>
+</html>
